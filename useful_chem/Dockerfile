@@ -10,7 +10,7 @@ USER jovyan
 # update numpy scipy
 RUN conda update --yes numpy scipy matplotlib seaborn
 # chemio-informatics
-RUN pip install cairosvg
+#RUN pip install cairosvg
 RUN conda install -c rdkit rdkit --quiet --yes
 RUN conda install -c openbabel openbabel --quiet --yes
 RUN conda install -c richlewis scikit-chem --quiet --yes
