@@ -1,0 +1,216 @@
+body {
+    font-family: Lato, Monaco, sans;
+}
+
+
+div #notebook { /* centre the content */
+    background: #fff; /* white background for content */
+    /*width: 1000px;*/
+    margin: auto;
+    padding-left: 1em;
+}
+
+div.cell { /* set cell width to about 80 chars */
+    /*width: 900px;*/
+}
+
+
+/* draw border around running cells */
+div.cell.border-box-sizing.code_cell.running {
+    border: 3px solid #D23;
+}
+
+.text_cell_render h1 {
+    font-weight: 400;
+    font-size: 32pt;
+    line-height: 100%;
+    color: #4271ae;
+    margin-bottom: 0.1em;
+    margin-top: 0.1em;
+    display: block;
+}
+
+.text_cell_render h2 {
+    font-weight: 300;
+    line-height: 100%;
+    color: #3e999f;
+    margin-bottom: 0.1em;
+    margin-top: 0.1em;
+    display: block;
+}
+
+.text_cell_render h3 {
+    font-weight: 300;
+    margin-top:12px;
+    margin-bottom: 3px;
+    color: #718c00;
+}
+
+.text_cell_render h4 {
+    font-weight: 300;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    color: #f92672;
+}
+
+
+
+/* Formatting code in markdown cells */
+div.rendered_html code {
+    font-style: italic;
+    font-weight: bold;
+    color: #FFFFF;
+    background-color: #FFFFFF;
+}
+
+
+
+/* Monokai */
+div.CodeMirror-lines {
+    font-family: 'Inconsolata',Inconsolata-dz;
+/*     background-color: #222222;*/
+    font-color: #b5bd68;
+    border: 0px;
+    /* padding-top: 1em; */
+    padding-bottom: 1em;
+}
+
+.CodeMirror pre {
+  font-family: 'Inconsolata','Inconsolata-dz','Menlo', 'Ubuntu Mono', monospace;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Based on Sublime Text's Monokai theme */
+.cm-s-ipython {background: #272822; color: #f8f8f2;}
+.cm-s-ipython div.CodeMirror-selected {background: #49483E !important;}
+.cm-s-ipython .CodeMirror-gutter {background: #272822;font-color: #b5bd68; border-right: 0px;}
+.cm-s-ipython .CodeMirror-gutter-text {color: #d0d0d0;}
+.cm-s-ipython .CodeMirror-cursor {border-left: 1px solid #f8f8f0 !important;}
+.cm-s-ipython span.cm-comment {color: #dddddd;}
+.cm-s-ipython span.cm-atom {color: #ae81ff;}
+.cm-s-ipython span.cm-number {color: #ae81ff;}
+.cm-s-ipython span.cm-property, .cm-s-ipython span.cm-attribute {color: #a6e22e;}
+.cm-s-ipython span.cm-keyword {color: #f92672;}
+.cm-s-ipython span.cm-string {color: #e6db74;}
+.cm-s-ipython span.cm-variable {color: #a6e22e;}
+.cm-s-ipython span.cm-variable-2 {color: #9effff;}
+.cm-s-ipython span.cm-def {color: #fd971f;}
+.cm-s-ipython span.cm-error {background: #f92672; color: #f8f8f0;}
+.cm-s-ipython span.cm-bracket {color: #f8f8f2;}
+.cm-s-ipython span.cm-tag {color: #f92672;}
+.cm-s-ipython span.cm-link {color: #ae81ff;}
+.cm-s-ipython .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+
+/* No border for selected cells */
+div.cell.selected {
+    border: 0px;
+}
+
+/*Input and output cells formatting*/
+div.prompt.input_prompt, div.prompt.output_prompt {
+    font-family: 'Inconsolata','Inconsolata-dz';
+    font-weight: 200;
+    color: #dc322f;
+    border: 0px;
+}
+
+div.prompt.input_prompt {
+    /*background-color: #CCCCCC;*/
+}
+
+div.prompt.output_prompt {
+    background-color: #FFFFFF;
+    padding-top: 0.5em;
+    margin: 8px; /*This is for getting the box-shadow property of the parent to display properly;*/
+}
+
+div.prompt {
+    width: 6.5em;
+}
+
+
+
+div.input_area {
+    border: 0px;
+    margin-bottom: 0;
+}
+
+div.out_prompt_overlay.prompt {
+    width: 1em;
+    border: 0px;
+}
+
+div.out_prompt_overlay.prompt:hover {
+    border: 0px;
+    background-color: #f92672;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    opacity:0.2;
+}
+
+div.output_subarea.output_text.output_stream.output_stdout,div.output_subarea.output_text {
+    margin-left: 0em;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    margin-top: 8px; /*This is for getting the box-shadow property of the parent to display properly;*/
+}
+
+div.output_wrapper {
+    background-color: #FFFFFF;
+    margin-bottom: 2em;
+    margin-top: 0;
+}
+
+div.output.vbox {
+    box-shadow:inset 0 0 8px #4d4d4d;   /* Check the output prompt settings when changing this*/
+}
+
+/************  TABLES  **********/
+.rendered_html table,
+.rendered_html tr,
+.rendered_html td {
+    font-family: "Fira Code", monospace;
+    font-size: 10 !important;
+    line-height: 150% !important;
+    border: 1px solid #D6D6D6;
+    color: #353535;
+}
+/********** PANDAS table **********/
+
+table.dataframe,
+.rendered_html tr,
+.dataframe * {
+    font-family: "Fira Code", monospace;
+    font-size: 10 !important;
+    /* border: 1px solid #D6D6D6;*/
+}
+.dataframe th,
+.rendered_html th {
+    font-family: Lato, Monaco, sans;
+    font-size: 12 !important;
+    font-weight: bold;
+}
+.dataframe td,
+.rendered_html td {
+    font-family: "Fira Code", monospace;
+    font-size: 10 !important;
+    color: #353535;
+    /* border: 1px solid #D6D6D6;*/
+    text-align: left;
+    min-width: 4em;
+}
+/********** PANDAS SUMMARY **********/
+.dataframe-summary-row tr:last-child,
+.dataframe-summary-col td:last-child {
+    font-family: Lato, Monaco, sans;
+    font-size: 10 !important;
+    font-weight: bold;
+    color: #353535;
+    border: 1px solid #D6D6D6;
+}
