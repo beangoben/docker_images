@@ -31,5 +31,5 @@ docker build -t "beangoben/pimp_jupyter" .
 And then move to whatever folder you want to work with and execute:
 
 ```
-docker run -p 8888:8888 -v $(pwd):/home/jovyan/work beangoben/pimp_jupyter
+docker run -p 8888:8888 -v "$(pwd)":/home/jovyan/work -it beangoben/pimp_jupyter
 ```

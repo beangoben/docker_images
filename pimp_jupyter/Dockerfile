@@ -12,7 +12,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN conda install -y -q conda-build xlrd xlwt autopep8 &&\
-    conda update -y -q notebook numpy scipy matplotlib seaborn ipython && \
+    conda update -y -q pip notebook numpy scipy matplotlib seaborn ipython && \
     conda clean --all
 
 #jupyter theme selector
