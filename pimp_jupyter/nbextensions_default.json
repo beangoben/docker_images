@@ -1,5 +1,30 @@
 {
-  "toc2":{
+  "ruler_column": [
+    "80",
+    "74"
+  ],
+  "ruler_linestyle": [
+    "dashed",
+    "dashed"
+  ],
+  "limit_output": "25000",
+  "limit_display_data": true,
+  "load_extensions": {
+    "table_beautifier/main": true,
+    "execute_time/ExecuteTime": true,
+    "code_prettify/autopep8": true,
+    "limit_output/main": true,
+    "ruler/main": true,
+    "toc2/main": true,
+    "code_font_size/code_font_size": true,
+    "toggle_all_line_numbers/main": true,
+    "jupyter_themes/theme_selector": true
+  },
+  "toc2": {
     "toc_cell": true
-  }
+  },
+  "ruler_color": [
+    "#ff0000",
+    "#00a808"
+  ]
 }
