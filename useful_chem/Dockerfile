@@ -1,6 +1,6 @@
 FROM  beangoben/pimp_jupyter
 
-USER jovyan
+USER root
 # update numpy scipy
 RUN conda update --yes numpy scipy matplotlib seaborn && \
     conda clean --all
