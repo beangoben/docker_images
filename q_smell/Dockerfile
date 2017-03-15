@@ -1,7 +1,6 @@
-FROM  beangoben/pimp_jupyter
+FROM  beangoben/pimp_jupyter3
 
 USER root
-RUN conda remove --name python2 -y -q --all  && conda clean --all
 # svg2png + chemioinformatics
 RUN pip install pubchempy cirpy py3Dmol decorator chemspipy
 # update numpy scipy
