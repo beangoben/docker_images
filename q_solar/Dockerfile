@@ -16,9 +16,11 @@ RUN conda update -n python2 matplotlib scipy numpy seaborn --quiet --yes && \
     conda clean --all
 
 # packages
-RUN conda install -n python2 -c rdkit rdkit --quiet --yes
-RUN conda install -n python2 -c openbabel openbabel --quiet --yes
-RUN pip2 install imolecule
+RUN conda install -n python2 -c rdkit rdkit --quiet --yes && \
+    conda clean --all
+RUN conda install -n python2 -c openbabel openbabel --quiet --yes && \
+    conda clean --all
+RUN pip2 install --no-cache imolecule
 RUN wget http://downloads.sourceforge.net/project/pyquante/PyQuante-1.6/PyQuante-1.6.5/PyQuante-1.6.5.tar.gz &&\
     tar xzvf PyQuante-1.6.5.tar.gz &&\
     source activate python2 &&\

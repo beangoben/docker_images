@@ -14,7 +14,7 @@ RUN apt-get update && \
 RUN conda install -y -q conda-build xlrd xlwt autopep8 &&\
     conda update -y -q pip notebook numpy scipy matplotlib seaborn ipython && \
     conda clean --all
-
+RUN pip2 install --no-cache autopep8
 #jupyter theme selector
 RUN mkdir /opt/conda/share/jupyter/nbextensions/jupyter_themes &&\
     wget https://raw.githubusercontent.com/merqurio/jupyter_themes/master/theme_selector.js &&\
@@ -22,10 +22,10 @@ RUN mkdir /opt/conda/share/jupyter/nbextensions/jupyter_themes &&\
     jupyter nbextension enable jupyter_themes/theme_selector
 
 # live reveal
-RUN conda install -y -q -c damianavila82 rise
+RUN conda install -y -q -c damianavila82 rise && conda clean --all
 
 # jupyter notebook extensions
-RUN pip install --upgrade --ignore-installed https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master &&\
+RUN pip install --upgrade --no-cache --ignore-installed https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master &&\
     jupyter nbextensions_configurator enable --system && \
     jupyter contrib nbextension install --system
 # update conda

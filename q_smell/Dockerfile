@@ -2,7 +2,7 @@ FROM  beangoben/pimp_jupyter3
 
 USER root
 # svg2png + chemioinformatics
-RUN pip install pubchempy cirpy py3Dmol decorator chemspipy
+RUN pip install --no-cache pubchempy cirpy py3Dmol decorator chemspipy
 # update numpy scipy
 RUN conda install -q -y -c conda-forge networkx flask cairocffi && conda clean --all
 RUN conda update --yes pillow && conda clean --all
