@@ -8,5 +8,6 @@ RUN conda install -c rdkit -q -y rdkit && \
     conda install -c conda-forge tensorflow && \
     conda install markdown2 && \ 
     conda install tqdm && \ 
+    conda install cirpy && \
     conda clean --all
 RUN pip install keras
