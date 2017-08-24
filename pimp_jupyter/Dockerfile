@@ -14,7 +14,7 @@ RUN apt-get update && \
 RUN conda install -y -q conda-build xlrd xlwt autopep8 &&\
     conda update -y -q pip notebook numpy scipy matplotlib seaborn ipython && \
     conda clean --all
-RUN pip2 install --no-cache autopep8
+RUN pip install --no-cache autopep8
 #jupyter theme selector
 RUN mkdir /opt/conda/share/jupyter/nbextensions/jupyter_themes &&\
     wget https://raw.githubusercontent.com/merqurio/jupyter_themes/master/theme_selector.js &&\
