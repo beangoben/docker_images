@@ -11,7 +11,7 @@ RUN apt-get update && \
     apt-get autoclean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN conda install -y -q conda-build xlrd xlwt autopep8 &&\
+RUN conda install -y -q -c conda-forge conda-build xlrd xlwt nb_conda_kernels &&\
     conda update -y -q pip notebook numpy scipy matplotlib seaborn ipython && \
     conda clean --all
 RUN pip install --no-cache autopep8
