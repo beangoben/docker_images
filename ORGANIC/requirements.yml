@@ -1,0 +1,21 @@
+# run: conda env create --file environment.yml
+name: ORGANIC
+channels:
+- defaults
+- conda-forge
+- rdkit
+- matsci
+dependencies:
+- python>=3.5
+- anaconda
+- jupyter
+- numpy
+- scipy
+- pandas
+- rdkit
+- keras
+- pymatgen
+- pip
+- pip:
+  - tqdm
+  - keras_tqdm
